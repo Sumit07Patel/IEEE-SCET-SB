@@ -244,6 +244,7 @@ span{
 .dropdown__item:hover .dropdown__menu, 
 .dropdown__subitem:hover > .dropdown__submenu {
   max-height: 1000px;
+
   transition: max-height .4s ease-in;
 }
 
@@ -272,6 +273,7 @@ span{
     padding-inline: 1rem;
   }
 }
+
 
 /* For large devices */
 @media screen and (min-width: 1118px) {
@@ -304,6 +306,7 @@ span{
 
   .dropdown__item, 
   .dropdown__subitem {
+    width: 100%;
     position: relative;
   }
 
@@ -373,4 +376,23 @@ span{
 }
 body{
     height: 1000vh;
+}
+
+
+@media screen and (max-width:1117px) {
+    .nav-logo{
+        width: 100%;
+        img{
+            width: 15rem;
+        }
+    }
+}
+
+@media screen and (max-width:500px) {
+    .nav-logo{
+        width: 100%;
+        img{
+            width: 10rem;
+        }
+    }
 }

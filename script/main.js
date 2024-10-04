@@ -24,9 +24,14 @@ mobileElement.addEventListener('click', () => {
 
  window.onscroll = function() {
     let navbar = document.getElementById("navbarFun");
-    if (window.pageYOffset > 10) { 
+    let bg= document.querySelector(".bg-img");
+    if (window.pageYOffset > 100) { 
         navbar.classList.add("show");
+        bg.classList.add("opacity")
+
     } else {
         navbar.classList.remove("show");
+        bg.classList.remove("opacity");
     }
+    
 };
