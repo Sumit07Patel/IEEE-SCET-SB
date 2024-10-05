@@ -35,3 +35,41 @@ mobileElement.addEventListener('click', () => {
     }
     
 };
+
+
+
+// STATS 
+const counters = document.querySelectorAll('.counter');
+
+counters.forEach(counter => {
+    const updateCount = () => {
+        const target = +counter.getAttribute('data-target');
+        const speed = +counter.getAttribute('data-speed');
+        let count = +counter.innerText;
+
+        // Calculate increment
+        let inc = Math.max(target / speed, 1); // Ensure at least 1
+
+        // Check if target is reached
+        if (count < target) {
+            // Add inc to count and output in counter
+            counter.innerText = Math.min(Math.floor(count + inc), target);
+            // Call function every ms
+            setTimeout(updateCount, 1);
+        } else {
+            counter.innerText = `${target}+`;
+        }
+    };
+
+    updateCount();
+});
+
+
+//carosel
+
+
+
+
+
+
+

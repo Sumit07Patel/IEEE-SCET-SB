@@ -1,3 +1,7 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap");
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 * {
     box-sizing: border-box;
     padding: 0;
@@ -20,6 +24,50 @@
     text-decoration: none;
   }
 
+  h1{
+    font-family: "Poppins", sans-serif;
+    font-size: 2rem;
+    color: #0066AF;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: all ease-in-out 0.3s;
+  }
+  h1:hover{
+    transform: scale(1.1);
+  }
+  h1::after{
+    content: "";
+    align-self: center;
+    display: inline-block;
+    width: 30%;
+    height: 3px;
+    background: #0066AF;
+    transition: all ease-in-out 0.3s;
+  }
+
+  h1:hover::after{
+    width: 60%;
+  }
+
+  p{
+    display: inline;
+    margin-top: 2rem;
+    text-align: justify;
+  }
+  .flex{
+    display: flex;
+    justify-content: center
+  }
+  .col{
+    flex-direction: column;
+  }
+ 
+
 @import "_navbar.scss";
 @import "_heroBg.scss";
-@import "_hero.scss"
+@import "_hero.scss";
+@import "_stats.scss";
+@import "_awards.scss";
+@import "_footer.scss";

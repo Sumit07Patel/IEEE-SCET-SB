@@ -1,4 +1,6 @@
+/*=============== GOOGLE FONTS ===============*/
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 * {
   box-sizing: border-box;
   padding: 0;
@@ -21,7 +23,50 @@ a {
   text-decoration: none;
 }
 
-/*=============== GOOGLE FONTS ===============*/
+h1 {
+  font-family: "Poppins", sans-serif;
+  font-size: 2rem;
+  color: #0066AF;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: all ease-in-out 0.3s;
+}
+
+h1:hover {
+  transform: scale(1.1);
+}
+
+h1::after {
+  content: "";
+  align-self: center;
+  display: inline-block;
+  width: 30%;
+  height: 3px;
+  background: #0066AF;
+  transition: all ease-in-out 0.3s;
+}
+
+h1:hover::after {
+  width: 60%;
+}
+
+p {
+  display: inline;
+  margin-top: 2rem;
+  text-align: justify;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+}
+
+.col {
+  flex-direction: column;
+}
+
 /*=============== VARIABLES CSS ===============*/
 :root {
   --header-height: 3.5rem;
@@ -266,7 +311,12 @@ span {
 .dropdown__item:hover .dropdown__menu,
 .dropdown__subitem:hover > .dropdown__submenu {
   max-height: 1000px;
+  width: 15rem;
   transition: max-height 0.4s ease-in;
+}
+
+a:hover {
+  color: var(--body-color);
 }
 
 /* Rotate dropdown icon */
@@ -391,10 +441,6 @@ span {
   top: 0;
 }
 
-body {
-  height: 1000vh;
-}
-
 @media screen and (max-width: 1117px) {
   .nav-logo {
     width: 100%;
@@ -432,4 +478,224 @@ body {
   margin-top: 130vh;
   padding: 2rem;
   background: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: 4rem;
+}
+
+@media screen and (min-width: 684px) {
+  h1 {
+    font-size: 4rem;
+  }
+  p {
+    align-self: center;
+    width: 30rem;
+  }
+}
+.counter {
+  font-size: 5rem;
+  font-weight: bold;
+}
+
+.stats-section {
+  margin-top: 100vh; /* For demo, adjust based on your layout */
+  height: 400px; /* Adjust as needed */
+  background: #f0f0f0; /* Just to visualize the section */
+}
+
+.counter-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  overflow: auto;
+}
+
+.counters {
+  background: #0f479a;
+  color: #fff;
+  padding: 10rem 5rem 10rem 5rem;
+  border-top: 3px lightskyblue solid;
+}
+
+.counters .counter-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 30px;
+  text-align: center;
+}
+
+.counters i {
+  color: lightskyblue;
+  margin-bottom: 5px;
+}
+
+.counters .counter {
+  font-size: 45px;
+  margin: 10px 0;
+}
+
+@media (max-width: 700px) {
+  .counters {
+    padding: 40px 20px;
+  }
+  .counters .counter-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .counters .counter-container > div:nth-of-type(1),
+  .counters .counter-container > div:nth-of-type(2) {
+    border-bottom: 1px lightskyblue solid;
+    padding-bottom: 20px;
+  }
+}
+.counter-title-container h1 {
+  text-align: center;
+  color: white;
+}
+.counter-title-container h1::after {
+  background: white;
+  margin-bottom: 3rem;
+  width: 70%;
+}
+.counter-title-container h1:hover::after {
+  width: 40%;
+}
+
+@media screen and (min-width: 912px) {
+  .counters .counter {
+    font-size: 4rem;
+  }
+  h3 {
+    font-size: 1.5rem;
+  }
+  .counter-title-container h1 {
+    font-size: 2rem;
+    text-align: center;
+    color: white;
+  }
+  .counter-title-container h1::after {
+    background: white;
+    width: 10%;
+  }
+  .counter-title-container h1:hover::after {
+    width: 40%;
+  }
+}
+#awards {
+  background: white;
+  text-align: center;
+}
+#awards h1 {
+  padding-top: 5rem;
+}
+
+.award-container {
+  padding: 5rem 4rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.award-container .boxes {
+  display: block;
+  height: 20rem;
+  width: 20rem;
+  background: rgb(255, 255, 255);
+  border-radius: 0.4rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: all ease-in-out 0.3s;
+}
+
+.boxes:hover {
+  transform: translateY(-20px); /* Scale up on hover */
+}
+
+.boxes img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover; /* Ensures the image covers the div without stretching */
+}
+
+@media screen and (max-width: 1120px) {
+  .award-container {
+    padding: 5rem 1rem;
+  }
+}
+.boxes img {
+  width: 100%;
+}
+
+.footer {
+  padding: 40px 0;
+  background-color: #0f479a;
+  color: white;
+}
+
+.footer ul {
+  padding: 0;
+  list-style: none;
+  text-align: center;
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+.footer li {
+  display: inline-block; /* Change to inline-block for horizontal layout */
+  padding: 0 10px;
+}
+
+.footer ul a {
+  color: inherit;
+  text-decoration: none;
+  opacity: 0.8;
+}
+
+.footer ul a:hover {
+  opacity: 1;
+}
+
+.footer .social {
+  text-align: center;
+  padding-bottom: 25px;
+}
+
+.footer .social > a {
+  font-size: 24px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 50%;
+  margin: 0 8px;
+  color: inherit;
+  opacity: 0.75;
+}
+
+.footer .social > a:hover {
+  opacity: 0.9;
+}
+
+.footer .copyright {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 13px;
+  color: #aaa;
+  margin-bottom: 0;
+}
+
+.footer .footer-break {
+  height: 2px;
+  border-width: 0;
+  color: gray;
+  background-color: white;
+}
+
+h3 {
+  margin-bottom: 2rem;
+}
+
+.social a img {
+  width: 2rem;
 }/*# sourceMappingURL=main.css.map */

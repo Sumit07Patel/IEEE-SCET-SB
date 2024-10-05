@@ -1,0 +1,86 @@
+
+        .counter {
+            font-size: 5rem;
+            font-weight: bold;
+        }
+       
+        .stats-section {
+            margin-top: 100vh; /* For demo, adjust based on your layout */
+            height: 400px; /* Adjust as needed */
+            background: #f0f0f0; /* Just to visualize the section */
+        }
+        .counter-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            overflow: auto;
+        }
+        .counters {
+            background: #0f479a;
+            color: #fff;
+            padding: 10rem 5rem 10rem 5rem;
+            border-top: 3px lightskyblue solid;
+        }
+        .counters .counter-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 30px;
+            text-align: center;
+        }
+        .counters i {
+            color: lightskyblue;
+            margin-bottom: 5px;
+        }
+        .counters .counter {
+            font-size: 45px;
+            margin: 10px 0;
+        }
+        @media (max-width: 700px) {
+            .counters {
+                padding: 40px 20px;
+            }
+            .counters .counter-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .counters .counter-container > div:nth-of-type(1),
+            .counters .counter-container > div:nth-of-type(2) {
+                border-bottom: 1px lightskyblue solid;
+                padding-bottom: 20px;
+            }
+        }
+        .counter-title-container{
+            h1{
+                text-align: center;
+                color: white;
+            }
+            h1::after{
+                background: white;
+                margin-bottom: 3rem;
+                width: 70%;
+            }
+            h1:hover::after{
+                width: 40%;
+            }
+        }
+        @media screen and (min-width: 912px){
+            .counters .counter{
+                font-size: 4rem;
+            }
+            h3{
+                font-size: 1.5rem;
+            }
+            .counter-title-container{
+                h1{
+                    font-size: 2rem;
+                    text-align: center;
+                    color: white;
+                }
+                h1::after{
+                    background: white;
+                    width: 10%;
+                }
+                h1:hover::after{
+                    width: 40%;
+                }
+            }
+        }
+    

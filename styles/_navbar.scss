@@ -1,5 +1,3 @@
-/*=============== GOOGLE FONTS ===============*/
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap");
 
 /*=============== VARIABLES CSS ===============*/
 :root {
@@ -244,8 +242,12 @@ span{
 .dropdown__item:hover .dropdown__menu, 
 .dropdown__subitem:hover > .dropdown__submenu {
   max-height: 1000px;
+  width: 15rem;
 
   transition: max-height .4s ease-in;
+}
+a:hover{
+    color: var(--body-color);
 }
 
 /* Rotate dropdown icon */
@@ -374,9 +376,7 @@ span{
 .header.show {
     top: 0;
 }
-body{
-    height: 1000vh;
-}
+
 
 
 @media screen and (max-width:1117px) {
